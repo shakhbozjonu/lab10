@@ -1,6 +1,23 @@
 import 'package:flutter/material.dart';
 import 'dart:math';
 
+class NavigationButton extends StatelessWidget {
+  final IconData icon;
+  final String routeName;
+
+  NavigationButton({required this.icon, required this.routeName});
+
+  @override
+  Widget build(BuildContext context) {
+    return FloatingActionButton(
+      onPressed: () {
+        Navigator.pushNamed(context, routeName);
+      },
+      child: Icon(icon),
+    );
+  }
+}
+
 class Screen2 extends StatefulWidget {
   @override
   _Screen2State createState() => _Screen2State();
@@ -75,20 +92,16 @@ class _Screen2State extends State<Screen2> with SingleTickerProviderStateMixin {
         ),
       ),
       floatingActionButton: Column(
-        mainAxisAlignment: MainAxisAlignment.end,
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          FloatingActionButton(
-            onPressed: () {
-              Navigator.pushNamed(context, '/');
-            },
-            child: Icon(Icons.home),
-          ),
           SizedBox(height: 16),
-          FloatingActionButton(
-            onPressed: () {
-              Navigator.pushNamed(context, '/screen3');
-            },
-            child: Icon(Icons.navigate_next),
+          Center(
+            child: ElevatedButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/screen3');
+              },
+              child: Text('THIRD PAGE'),
+            ),
           ),
         ],
       ),

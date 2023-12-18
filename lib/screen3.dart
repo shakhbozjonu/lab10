@@ -62,13 +62,13 @@ class _Screen3State extends State<Screen3> {
                   onPressed: () {
                     Navigator.pushNamed(context, '/');
                   },
-                  child: Text('Go to Screen 1'),
+                  child: Text('FIRST'),
                 ),
                 ElevatedButton(
                   onPressed: () {
                     Navigator.pushNamed(context, '/screen2');
                   },
-                  child: Text('Go to Screen 2'),
+                  child: Text('SECOND'),
                 ),
               ],
             ),

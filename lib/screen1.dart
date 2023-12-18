@@ -73,7 +73,7 @@ class _Screen1State extends State<Screen1> {
               onPressed: () {
                 Navigator.pushNamed(context, '/screen2');
               },
-              child: Text('Go to Screen 2'),
+              child: Text('SECOND'),
             ),
           ],
         ),
